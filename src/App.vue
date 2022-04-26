@@ -1,13 +1,15 @@
 
 <template>
-  <Modal @closeModal="isModalOpened = false" :oneRoomDatas="oneRoomDatas" :isModalOpened="isModalOpened" :indexClicked="indexClicked"/>
+  <Modal @closeModal="isModalOpened = false" :oneRoomDatas="oneRoomDatas" 
+  :isModalOpened="isModalOpened" :indexClicked="indexClicked"/>
 
   <div class="menu">
     <a v-for="menu in menus" :key="menu"> {{ menu }} </a>
   </div>
 
   <Discount :discountPercent="discountPercent" />
-  <Card @openModal="isModalOpened = true; indexClicked = $event;" v-for="(oneRoom, index) in oneRoomDatas"
+  <Card @openModal="isModalOpened = true; indexClicked = $event;" 
+   v-for="(oneRoom, index) in oneRoomDatas"
    :key="oneRoom" :oneRoom="oneRoom" :indexClicked="index"/>
   
   <div>
