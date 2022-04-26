@@ -9,18 +9,17 @@
   </div>
 </template>
 
-
 <script>
 
-export default {
-  name: "Modal",
-  props: {
-  oneRoomDatas: Array,
-  isModalOpened: Boolean,
-  indexClicked: Number,
-  },
+  export default {
+    name: "Modal",
+    props: {
+    oneRoomDatas: Array,
+    isModalOpened: Boolean,
+    indexClicked: Number,
+    },
 
-};
+  };
 
 </script>
 

@@ -12,39 +12,36 @@
    v-for="(oneRoom, index) in oneRoomDatas"
    :key="oneRoom" :oneRoom="oneRoom" :indexClicked="index"/>
   
-  <div>
-
-  </div>
 
 </template>
 
 
 <script>
 
-import oneRoomDataTemp from "./oneRoomData.js";
-import DiscountBanner from "./DiscountBanner.vue";
-import Modal from "./Modal.vue";
-import Card from "./Card.vue";
-export default {
-  name: "App",
-  data() {
-    return {
-    indexClicked: 0,
-    oneRoomDatas: oneRoomDataTemp,
-    isModalOpened: false,
-    price1: 60,
-    discountPercent: 30,
-    menus: ["Home", "Shop", "About"],
-    };
-  },
+  import oneRoomDataTemp from "./oneRoomData.js";
+  import DiscountBanner from "./DiscountBanner.vue";
+  import Modal from "./Modal.vue";
+  import Card from "./Card.vue";
+  export default {
+    name: "App",
+    data() {
+      return {
+      indexClicked: 0,
+      oneRoomDatas: oneRoomDataTemp,
+      isModalOpened: false,
+      price1: 60,
+      discountPercent: 30,
+      menus: ["Home", "Shop", "About"],
+      };
+    },
 
-  components: {
-    Discount: DiscountBanner,
-    Modal: Modal,
-    Card: Card,
-  },
+    components: {
+      Discount: DiscountBanner,
+      Modal: Modal,
+      Card: Card,
+    },
 
-};
+  };
 
 </script>
 
@@ -115,5 +112,3 @@ div {
 }
 
 </style>
-
-
