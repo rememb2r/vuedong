@@ -22,8 +22,13 @@
       }
     },
     watch : {
-      month(){
-
+      month(va){
+      
+        if (va.indexOf(' ') >= 0) {
+          alert('스페이스 입력하지 마!')
+          this.month = 1
+          
+        } 
       },
     },
     props: {
